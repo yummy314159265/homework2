@@ -76,7 +76,6 @@ header nav a {
 
 .blob {
     display: flex;
-    flex-direction: row;
     width: 100%;
 }
 
@@ -239,11 +238,25 @@ header nav a {
     }
 
     .blob {
-        flex-wrap: nowrap;
+        display: block;
     }
 
     .blob h2 {
-        
+        text-align: center;
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contact-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #about-me-content{
+        padding: auto;
+        margin: auto;
+        text-align: center;
     }
 
     #contact a{
@@ -251,11 +264,9 @@ header nav a {
         width: 100%;
         border: 0;
         padding: 0;
-        margin: 2px 0 2px 0;
+        margin: 2px 0px 2px 0px;
+        text-align: center;
+        text-decoration: underline;
     }
     
-    .contact-content {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
+   
