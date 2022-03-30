@@ -11,6 +11,8 @@
 body {
     margin-right: 0;
     margin-left: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -75,11 +77,12 @@ header nav a {
 .blob {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .blob h2 {
     font-size: 200%;
-    flex: 1 0 250px;
+    flex: 0 0 250px;
     text-align: end;
     margin-right: 30px;
     padding-right: 10px;
@@ -92,7 +95,7 @@ header nav a {
     flex-flow: row wrap;
     padding-top: 40px;
     padding-bottom: 30px;
-    justify-content: flex-start;
+    justify-content: space-around;
     position: relative;
     width: 100%;
 }
@@ -101,9 +104,17 @@ header nav a {
     margin: 0px 10px 0px 10px;
 }
 
+.big-image {
+    width: 98%;
+}
+
+.small-image {
+    width: 48%;
+}
+
 .blue-tint {
     border: 4px solid var(--meteorite);
-    margin-top: 2px;
+    margin-bottom: 2px;
     position: relative;
     filter: sepia(0%) saturate(70%) brightness(70%) hue-rotate(5deg);
     transition: all .5s ease-in-out;
@@ -137,6 +148,12 @@ header nav a {
     padding-right: 20px;
 }
 
+.contact-content {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
 #about-me-content {
     font-size: 16px;
     padding-top: 15px;
@@ -144,35 +161,30 @@ header nav a {
 }
 
 #big {
-    width: 800px;
     height: 400px;
     background-size: cover;
     background-image: url("../images/placeholder1.jpg");
 }
 
 #small-1 {
-    width: 390px;
     height: 200px;
     background-size: cover;
     background-image: url("../images/placeholder2.jpg");
 }
 
 #small-2 {
-    width: 390px;
     height: 200px;
     background-size: cover;
     background-image: url("../images/placeholder3.jpg");
 }
 
 #small-3 {
-    width: 390px;
     height: 200px;
     background-size: cover;
     background-image: url("../images/placeholder4.jpg");
 }
 
 #small-4 {
-    width: 390px;
     height: 200px;
     background-size: cover;
     background-image: url("../images/placeholder5.jpg");
@@ -180,10 +192,70 @@ header nav a {
 
 #contact a {
     height: fit-content;
-    width: fit-content;
     margin-left: 100px;
     padding-top: 60px;
     color: var(--meteorite);
     text-decoration: 0;
     border-bottom: 4px solid var(--meteorite);
+}
+
+@media screen and (max-width: 1296px) {
+    .small-image {
+        width: 98%;
+    }
+
+    #big {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .selfie {
+        display: none;
+    }
+
+    header {
+        justify-content: space-evenly;
+        height: 135px;
+    }
+
+    header h1 {
+        width: 100%;
+        background-color: var(--meteorite);
+        color: var(--cherokee);
+        text-align: center;
+    }
+
+    header nav {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    
+    header nav a {
+        font-size: 20px;
+        border: 0;
+    }
+
+    .blob {
+        flex-wrap: nowrap;
+    }
+
+    .blob h2 {
+        
+    }
+
+    #contact a{
+        margin-left: 0;
+        width: 100%;
+        border: 0;
+        padding: 0;
+        margin: 2px 0 2px 0;
+    }
+    
+    .contact-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
