@@ -107,9 +107,20 @@ header nav a {
     width: 99%;
 }
 
+.big {
+    height: 400px;
+    background-size: cover;
+}
+
 .small-image {
     width: 49%;
 }
+
+.small {
+    height: 200px;
+    background-size: cover;
+}
+
 
 .blue-tint {
     border: 4px solid var(--meteorite);
@@ -159,33 +170,23 @@ header nav a {
     padding-bottom: 30px;
 }
 
-#big {
-    height: 400px;
-    background-size: cover;
+#big-1 {
     background-image: url("../images/placeholder1.jpg");
 }
 
 #small-1 {
-    height: 200px;
-    background-size: cover;
     background-image: url("../images/placeholder2.jpg");
 }
 
 #small-2 {
-    height: 200px;
-    background-size: cover;
     background-image: url("../images/placeholder3.jpg");
 }
 
 #small-3 {
-    height: 200px;
-    background-size: cover;
     background-image: url("../images/placeholder4.jpg");
 }
 
 #small-4 {
-    height: 200px;
-    background-size: cover;
     background-image: url("../images/placeholder5.jpg");
 }
 
@@ -203,7 +204,7 @@ header nav a {
         width: 99%;
     }
 
-    #big {
+    #big-1 {
         height: 200px;
     }
 }
