@@ -18,27 +18,27 @@ body {
 header {
     background-color: var(--meteorite);
     color: var(--cherokee);
-    height: 70px;
+    height: 200px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items:flex-start;
     margin-left: -10px;
     margin-top: -10px;
 }
 
 header h1 {
-    padding-left: 30px;
+    padding-left: 150px;
     padding-right: 20px;
-    margin-top: 4px 0px 0px 0px;
     background-color: var(--cherokee);
     color: var(--meteorite);
+    font-size: 100px;
+    margin-top: 50px;
 }
 
 header nav {
     margin-right: 10px;
-    margin-top: 4px;
+    margin-top: 120px;
 }
 
 header nav a {
@@ -49,8 +49,15 @@ header nav a {
     padding-left: 5px;
     padding-right: 5px;
     border-bottom: 2px solid var(--cherokee);
-    font-size: 12px;
+    font-size: 27px;
     font-weight: bold;
+    text-align: end;
+}
+
+.nav-links {
+    width: 25%;
+    margin: 10px 0 0 30px;
+    display: inline;
 }
 
 .container {
@@ -199,7 +206,7 @@ header nav a {
     border-bottom: 4px solid var(--meteorite);
 }
 
-@media screen and (max-width: 1296px) {
+@media screen and (max-width: 1200px) {
     .small-image {
         width: 99%;
     }
@@ -207,9 +214,22 @@ header nav a {
     #big-1 {
         height: 200px;
     }
-}
+    
+    header nav {
+        margin: 10px 0 0 0;
+    }
 
-@media screen and (max-width: 1054px) {
+    header nav a {
+        border: 0;
+    }
+
+    .nav-links {
+        width: 100%;
+        display: block;
+        border-bottom: 2px solid var(--cherokee);
+        margin: 10px 0 0 0;
+    }
+
     .contact-content {
         flex-wrap: wrap;
         justify-content: center;
@@ -235,6 +255,8 @@ header nav a {
     header {
         justify-content: space-evenly;
         height: 135px;
+        flex-wrap: wrap;
+        padding: 0;
     }
 
     header h1 {
@@ -242,6 +264,9 @@ header nav a {
         background-color: var(--meteorite);
         color: var(--cherokee);
         text-align: center;
+        padding: 0;
+        margin: 30px 0 0 0;
+        font-size: 60px;
     }
 
     header nav {
@@ -252,7 +277,14 @@ header nav a {
     
     header nav a {
         font-size: 20px;
+        padding: 0;
+        border-bottom: 2px solid var(--cherokee);
+    }
+
+    .nav-links{
+        display: inline;
         border: 0;
+        margin: 0 20px 0 20px
     }
 
     .blob {
